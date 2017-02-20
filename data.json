@@ -1,0 +1,40 @@
+{
+  "listDetail": [
+    {
+      "id":5,
+      "name":"张三",
+      "list_img":"http://pinauc.com/Uploads/Goods/20161129/max_583d43c529a53.jpg",
+      "info":"1dfsdfsdf",
+      "allImg":[
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8eec24d2.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8f1f36fa.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8f4db5d6.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8eec24d2.jpg"
+      ]
+    },
+    {
+      "id":9,
+      "name":"王五",
+      "list_img":"http://pinauc.com/Uploads/Goods/20161129/max_583d43dd8f3f8.jpg",
+      "info":"2sdfsdf",
+      "allImg":[
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8eec24d2.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8f1f36fa.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8f4db5d6.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8eec24d2.jpg"
+      ]
+    },
+    {
+      "id":15,
+      "name":"麻6",
+      "list_img":"http://pinauc.com/Uploads/Goods/20161129/max_583d43dd8f3f8.jpg",
+      "info":"3sdfsdf",
+      "allImg":[
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8eec24d2.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8f1f36fa.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8f4db5d6.jpg",
+        "http://pinauc.com/Uploads/Goods/20160718/max_578cc8eec24d2.jpg"
+      ]
+    }
+  ]
+}
