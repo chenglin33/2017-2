@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import axios from "axios"
 export default {
   name: 'detail',
   data () {
     return {
-      apiUrl:'/api/detail/',
-      qdetail: {}
+      apiUrl:'/api/detail',
+      qdetail: {},
+      everlists:[]
     }
   },
   mounted: function(){
@@ -20,21 +20,21 @@ export default {
   },
   computed:{
     aid:function(){
-      return this.$route.params.id//与路由里path: '/detail/:aid'对应
+      return this.$route.params.id//与路由里path: '/detail/:id'对应
     }
   },
   methods:{
       lists:function(){
           var _this = this;
-          this.$http.get(this.apiUrl + this.aid).then((res) => {
-              for(var i=0;i < res.data.data.length;i++){
-                if(this.aid==res.data.data[i].id){
-                  _this.qdetail = res.data.data[i];
-                }          
-              }
-            }, (error) =>{
-              console.log(error);
-            });
+          this.$http.get(this.apiUrl).then((res) => {
+            for(var i=0;i < res.data.data.length;i++){
+              if(this.aid==res.data.data[i].id){
+                _this.qdetail = res.data.data[i];
+              }          
+            }
+          }, (error) =>{
+            console.log(error);
+          });
 
 
       }

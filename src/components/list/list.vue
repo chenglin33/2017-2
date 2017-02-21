@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import axios from "axios"
 export default {
   name: 'list',
   data () {
@@ -33,8 +32,8 @@ export default {
           this.$http.get(this.apiUrl).then((response)=>{
               var _list = response.data.data;
               _this.list = _list;
-          }, (response)=>{
-              alert(response)
+          }, (error)=>{
+              console.log(error);
           });         
       }
   }

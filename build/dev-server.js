@@ -37,7 +37,7 @@ apiRoutes.get('/listdetail', function(req, res){
     data:listdetail
   });
 });
-apiRoutes.get('/detail/:id', function(req, res){
+apiRoutes.get('/detail', function(req, res){
   res.json({
     errno:0,
     data:listdetail
