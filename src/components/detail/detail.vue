@@ -6,13 +6,13 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
   name: 'detail',
   data () {
     return {
       apiUrl:'/api/detail/',
-      qdetail: {},
-      spinnerFlag: true
+      qdetail: {}
     }
   },
   mounted: function(){
@@ -26,16 +26,13 @@ export default {
   methods:{
       lists:function(){
           var _this = this;
-          this.$http.get(this.apiUrl + this.aid).then(function(res) {
+          this.$http.get(this.apiUrl + this.aid).then((res) => {
               for(var i=0;i < res.data.data.length;i++){
                 if(this.aid==res.data.data[i].id){
                   _this.qdetail = res.data.data[i];
                 }          
               }
-              //_this.qdetail = res.data.listDetail.id ? res.data.listDetail : JSON.parse(res.request.response);
-              this.spinnerFlag = false;
-            }.bind(this))
-            .catch(function(error){
+            }, (error) =>{
               console.log(error);
             });
 

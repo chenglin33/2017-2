@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
   name: 'list',
   data () {
@@ -29,11 +30,10 @@ export default {
       },
       lists:function(){
           var _this = this;
-          this.$http.get(this.apiUrl).then(function(response){
+          this.$http.get(this.apiUrl).then((response)=>{
               var _list = response.data.data;
               _this.list = _list;
-              //_this.waterfallLen = _this.list.length;
-          }, function(response){
+          }, (response)=>{
               alert(response)
           });         
       }

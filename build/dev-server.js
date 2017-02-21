@@ -40,7 +40,7 @@ apiRoutes.get('/listdetail', function(req, res){
 apiRoutes.get('/detail/:id', function(req, res){
   res.json({
     errno:0,
-    data:listdetail.req.params.id
+    data:listdetail
   });
 });
 
