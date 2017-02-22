@@ -10,7 +10,7 @@ export default {
   name: 'detail',
   data () {
     return {
-      apiUrl:'/api/detail',
+      apiUrl:'/api/detail/',
       qdetail: {},
       everlists:[]
     }
@@ -26,12 +26,14 @@ export default {
   methods:{
       lists:function(){
           var _this = this;
-          this.$http.get(this.apiUrl).then((res) => {
-            for(var i=0;i < res.data.data.length;i++){
+          this.$http.get(this.apiUrl+this.aid).then((res) => {
+            /*for(var i=0;i < res.data.data.length;i++){
               if(this.aid==res.data.data[i].id){
                 _this.qdetail = res.data.data[i];
               }          
-            }
+            }*/
+            _this.qdetail = res.data.data
+            //console.log(_this.qdetail = res.data.data);
           }, (error) =>{
             console.log(error);
           });

@@ -28,6 +28,15 @@ var app = express()
 var appData = require('../data.json');
 var listdetail = appData.listDetail; //列表页详情页数据
 
+//var details=[];
+function getDetail(id){
+  for(var i=0;i<listdetail.length;i++){
+    if(id==listdetail[i].id){
+      return listdetail[i]
+    }
+  }
+}
+
 /*编写路由*/
 var apiRoutes = express.Router();
 
@@ -37,10 +46,10 @@ apiRoutes.get('/listdetail', function(req, res){
     data:listdetail
   });
 });
-apiRoutes.get('/detail', function(req, res){
+apiRoutes.get('/detail/:id', function(req, res){
   res.json({
     errno:0,
-    data:listdetail
+    data:getDetail(req.params.id)
   });
 });
 
